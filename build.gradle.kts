@@ -2,10 +2,12 @@ plugins {
     id("java-library")
     id("maven-publish")
     id("signing")
+
+    kotlin("jvm") version "1.5.21"
 }
 
 group = "io.github.casually-blue"
-version = "1.6"
+version = "1.7"
 
 
 repositories {

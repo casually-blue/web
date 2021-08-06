@@ -1,8 +1,8 @@
-package io.github.casuallyblue.view.html.tags
+package io.github.casuallyblue.web.html.tags
 
-import io.github.casuallyblue.view.html.element.Element
-import io.github.casuallyblue.view.html.HtmlTagMarker
-import io.github.casuallyblue.view.html.attributes.Attribute
+import io.github.casuallyblue.web.html.element.Element
+import io.github.casuallyblue.web.html.HtmlTagMarker
+import io.github.casuallyblue.web.html.attributes.Attribute
 
 @HtmlTagMarker
 abstract class Tag(val name: String, vararg var attributes: Attribute) : Element {

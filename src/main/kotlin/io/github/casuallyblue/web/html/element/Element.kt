@@ -1,4 +1,4 @@
-package io.github.casuallyblue.view.html.element
+package io.github.casuallyblue.web.html.element
 
 import play.mvc.Result
 import play.mvc.Results

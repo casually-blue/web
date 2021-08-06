@@ -1,6 +1,6 @@
-package io.github.casuallyblue.view.html.tags.head
+package io.github.casuallyblue.web.html.tags.head
 
-import io.github.casuallyblue.view.html.attributes.Attribute
+import io.github.casuallyblue.web.html.attributes.Attribute
 
 fun HeadTag.meta(content: Content, httpEquiv: HttpEquiv, vararg attributes: Attribute) = initTag(Meta(content, httpEquiv, *attributes)) {}
 

@@ -1,7 +1,7 @@
-package io.github.casuallyblue.view
+package io.github.casuallyblue.web
 
-import io.github.casuallyblue.view.html.HTML
-import io.github.casuallyblue.view.html.attributes.Attribute
+import io.github.casuallyblue.web.html.HTML
+import io.github.casuallyblue.web.html.attributes.Attribute
 import play.mvc.Result
 
 fun html(vararg attributes: Attribute, init: HTML.() -> Unit): HTML {

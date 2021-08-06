@@ -1,4 +1,4 @@
-package io.github.casuallyblue.view.html.attributes
+package io.github.casuallyblue.web.html.attributes
 
 open class Attribute(val name: String, val value: String) {
 }

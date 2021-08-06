@@ -1,4 +1,4 @@
-package io.github.casuallyblue.view.html.element
+package io.github.casuallyblue.web.html.element
 
 class TextElement(val text: String) : Element {
     override fun render(builder: StringBuilder, indent: String) {

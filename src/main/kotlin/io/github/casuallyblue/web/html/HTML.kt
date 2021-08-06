@@ -1,7 +1,7 @@
-package io.github.casuallyblue.view.html
+package io.github.casuallyblue.web.html
 
-import io.github.casuallyblue.view.html.tags.TagWithText
-import io.github.casuallyblue.view.html.attributes.Attribute
+import io.github.casuallyblue.web.html.tags.TagWithText
+import io.github.casuallyblue.web.html.attributes.Attribute
 
 class HTML(vararg attributes: Attribute) : TagWithText("html", *attributes){
     override fun render(builder: StringBuilder, indent: String) {

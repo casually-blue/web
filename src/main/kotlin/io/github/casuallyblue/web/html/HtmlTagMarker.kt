@@ -1,4 +1,4 @@
-package io.github.casuallyblue.view.html
+package io.github.casuallyblue.web.html
 
 @DslMarker
 annotation class HtmlTagMarker

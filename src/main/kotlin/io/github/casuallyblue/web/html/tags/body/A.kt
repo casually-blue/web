@@ -1,6 +1,6 @@
-package io.github.casuallyblue.view.html.tags.body
+package io.github.casuallyblue.web.html.tags.body
 
-import io.github.casuallyblue.view.html.attributes.Attribute
+import io.github.casuallyblue.web.html.attributes.Attribute
 
 fun BodyTag.a(href: HRef, init: A.() -> Unit) {
     initTag(A(href), init)

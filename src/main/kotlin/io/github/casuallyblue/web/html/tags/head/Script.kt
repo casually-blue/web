@@ -1,4 +1,4 @@
-package io.github.casuallyblue.view.html.tags.head
+package io.github.casuallyblue.web.html.tags.head
 
 fun HeadTag.script(init: Script.() -> Unit) = initTag(Script(), init)
 
