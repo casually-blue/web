@@ -6,7 +6,7 @@
         <entry key="com.github.casually-blue.web">
           <value>
             <ProjectSettingsEntry>
-              <option name="playDistrPath" value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.typesafe.play/play_2.13/2.8.8/85d55fca86368e09c177be194c9866bf74b51b57/play_2.13-2.8.8.jar" />
+              <option name="playDistrPath" value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.typesafe.play/play_2.12/2.8.8/97624b87506e0ff37908e5cf55841763ea46dd0c/play_2.12-2.8.8.jar" />
             </ProjectSettingsEntry>
           </value>
         </entry>
