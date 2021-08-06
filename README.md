@@ -6,7 +6,7 @@ It enables writing html pages without using scala templates which are somewhat i
 _Note:_ You really should be using [kotlinx.html](https://github.com/Kotlin/kotlinx.html), it is most likely much more fully featured and will probably fit any use cases better than this library, it also supports compiling to js which this library does not.
 This library is mainly a learning project
 
-## Use Instructions
+## Installation Instructions
 To use, just declare as a dependency in your project.
 
 Gradle Example
