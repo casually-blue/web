@@ -12,21 +12,13 @@ To use, just declare as a dependency in your project.
 Gradle Example
 ```kotlin
 repositories {
-    maven {
-        name = "Github Packages"
-        url = uri("https://maven.pkg.github.com/casually-blue/repos/")
-        credentials {
-            username = "{github username}"
-            password = "{github access token}"
-        }
-    }
+    mavenCentral()
 }
 
 dependencies {
-    implementation("io.github.casually-blue:web:{version}")
+    implementation("io.github.casually-blue:web:1.6")
 }
 ```
-Replace the `{}` values with your credentials and desired version
 
 ## Usage
 Just use on its own or inside a View object. The view object provides a simple `.render()` function which returns a playmvc result with the http content-type set for use in your controller
