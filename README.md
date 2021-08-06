@@ -58,6 +58,8 @@ View(
 ```
 which would output when rendered in the browser:
 
+---
+
 <h1>Hello from kotlin View
     <br>
     <a href='#'>Link</a>
