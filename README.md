@@ -56,7 +56,8 @@ View(
     }
 )
 ```
-which outputs:
+which would output when rendered in the browser:
+
 #Hello from Kotlin View
 [Link]()
 
