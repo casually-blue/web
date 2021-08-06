@@ -5,7 +5,26 @@ are somewhat incompatible with running playmvc linked to kotlin because it cause
 which are much harder to deal with
 
 ## Use Instructions
-To use, just declare as a dependency in your project by following the package instructions, and the github package repository instructions to get set up.
+To use, just declare as a dependency in your project.
+
+Gradle Example
+```kotlin
+repositories {
+    maven {
+        name = "Github Packages"
+        url = uri("https://maven.pkg.github.com/casually-blue/repos/")
+        credentials {
+            username = "{github username}"
+            password = "{github access token}"
+        }
+    }
+}
+
+dependencies {
+    implementation("com.github.casually-blue:web:{version}")
+}
+```
+Replace the {} values with your credentials and desired version
 
 ## Usage
 Just use on its own or inside a View object. The view object provides a simple `.render()` function which returns a playmvc result with the http content-type set for use in your controller
