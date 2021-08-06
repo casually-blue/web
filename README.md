@@ -63,7 +63,7 @@ html(lang("en")) {
 
 ---
 
-which would output when rendered in the browser:
+Which would output when rendered in the browser:
 
 ---
 
