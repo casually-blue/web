@@ -59,6 +59,6 @@ View(
 which would output when rendered in the browser:
 
 # Hello from Kotlin View
-[Link]()
+# [Link]()
 
 Count 1 Count 2 Count 3 
