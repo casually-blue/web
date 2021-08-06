@@ -8,6 +8,7 @@ which are much harder to deal with
 To use, just declare as a dependency in your project by following the package instructions, and the github package repository instructions to get set up.
 
 ## Usage
+Just use on its own or inside a View object. The view object provides a simple `.render()` function which returns a playmvc result with the content-type set for use in your controller
 ```kotlin
 View(
     html(lang("en")) {
