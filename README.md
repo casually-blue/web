@@ -23,7 +23,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.casually-blue:web:{version}")
+    implementation("io.github.casually-blue:web:{version}")
 }
 ```
 Replace the `{}` values with your credentials and desired version
