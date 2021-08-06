@@ -60,6 +60,9 @@ html(lang("en")) {
     // write the code out to a string
 }.render(builder = sb, indent = "")
 ```
+
+---
+
 which would output when rendered in the browser:
 
 ---
