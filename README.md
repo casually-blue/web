@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-    implementation("io.github.casually-blue:web:1.6")
+    implementation("io.github.casually-blue:web:1.7")
 }
 ```
 
