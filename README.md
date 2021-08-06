@@ -29,32 +29,31 @@ Replace the `{}` values with your credentials and desired version
 ## Usage
 Just use on its own or inside a View object. The view object provides a simple `.render()` function which returns a playmvc result with the http content-type set for use in your controller
 ```kotlin
-View(
-    html(lang("en")) {
-        head {
-            title { +"Test Page View" }
-            meta(content("text/html;charset=utf8"), httpEquiv("Content-Type"))
-            meta(content("utf-8"), httpEquiv("encoding"))
-        }
-        body {
-            h1(
-                id("home"),
-                `class`("test", "data")
-            ) {
-                +"Hello from Kotlin View"
-                br()
-                a(href("#")){
-                    +"Link"
-                }
+var sb = StringBuilder()
+html(lang("en")) {
+    head {
+        title { +"Test Page View" }
+        meta(content("text/html;charset=utf8"), httpEquiv("Content-Type"))
+        meta(content("utf-8"), httpEquiv("encoding"))
+    }
+    body {
+        h1(
+            id("home"),
+            `class`("test", "data")
+        ) {
+            +"Hello from Kotlin View"
+            br()
+            a(href("#")){
+                +"Link"
             }
-            p{
-                for(i in 1..3) {
-                    +"Count $i"
-                }
+        }
+        p{
+            for(i in 1..3) {
+                +"Count $i"
             }
         }
     }
-)
+}.render(builder = sb, indent = "")
 ```
 which would output when rendered in the browser:
 
