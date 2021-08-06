@@ -24,7 +24,7 @@ dependencies {
     implementation("com.github.casually-blue:web:{version}")
 }
 ```
-Replace the {} values with your credentials and desired version
+Replace the `{}` values with your credentials and desired version
 
 ## Usage
 Just use on its own or inside a View object. The view object provides a simple `.render()` function which returns a playmvc result with the http content-type set for use in your controller
