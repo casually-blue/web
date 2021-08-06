@@ -58,7 +58,8 @@ View(
 ```
 which would output when rendered in the browser:
 
-# Hello from Kotlin View
-# [Link]()
-
-Count 1 Count 2 Count 3 
+<h1>Hello from kotlin View
+    <br>
+    <a href='#'>Link</a>
+</h1>
+<p>Count 1 Count 2 Count 3</p>
