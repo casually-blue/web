@@ -5,7 +5,7 @@ It enables writing html pages without using scala templates which
 are somewhat incompatible with running playmvc linked to kotlin because it causes two-way dependencies
 which are much harder to deal with
 
-_Note:_ You really should be using kotlinx, it is most likely much more fully featured and will probably fit any use cases better than this library
+_Note:_ You really should be using [kotlinx.html](https://github.com/Kotlin/kotlinx.html), it is most likely much more fully featured and will probably fit any use cases better than this library, it also supports compiling to js which this library does not
 This library is mainly a learning project
 
 ## Use Instructions
