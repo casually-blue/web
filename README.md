@@ -29,7 +29,9 @@ Replace the `{}` values with your credentials and desired version
 ## Usage
 Just use on its own or inside a View object. The view object provides a simple `.render()` function which returns a playmvc result with the http content-type set for use in your controller
 ```kotlin
+// setup the buffer to write the html into
 var sb = StringBuilder()
+// Create a html page, and set the language for accessibility on browsers
 html(lang("en")) {
     head {
         title { +"Test Page View" }
@@ -48,11 +50,13 @@ html(lang("en")) {
             }
         }
         p{
+            // normal kotlin code is supported inside tags
             for(i in 1..3) {
                 +"Count $i"
             }
         }
     }
+    // write the code out to a string
 }.render(builder = sb, indent = "")
 ```
 which would output when rendered in the browser:
