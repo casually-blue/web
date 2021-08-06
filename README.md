@@ -43,8 +43,8 @@ View(
             ) {
                 +"Hello from Kotlin View"
                 br()
-                a(href("/phones")){
-                    +"Phones"
+                a(href("#")){
+                    +"Link"
                 }
             }
             p{
@@ -56,3 +56,8 @@ View(
     }
 )
 ```
+which outputs:
+#Hello from Kotlin View
+[Link]()
+
+Count 1 Count 2 Count 3 
