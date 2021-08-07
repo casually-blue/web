@@ -55,7 +55,7 @@ publishing {
                 scm {
                     connection.set("scm:git:git@github.com:casually-blue/web.git")
                     developerConnection.set("scm:git:git@github.com:casually-blue/web.git")
-                    url.set("https://gihtub.com/casually-blue/web")
+                    url.set("https://github.com/casually-blue/web")
                 }
 
                 developers {
