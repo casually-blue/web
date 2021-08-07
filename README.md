@@ -30,35 +30,38 @@ import io.github.casuallyblue.web.html.attributes.*
 import io.github.casuallyblue.web.html.tags.body.*
 import io.github.casuallyblue.web.html.tags.head.*
 
-// setup the buffer to write the html into
-var sb = StringBuilder()
-// Create a html page, and set the language for accessibility on browsers
-html(lang("en")) {
-    head {
-        title { +"Test Page View" }
-        meta(content("text/html;charset=utf8"), httpEquiv("Content-Type"))
-        meta(content("utf-8"), httpEquiv("encoding"))
-    }
-    body {
-        h1(
-            id("home"),
-            `class`("test", "data")
-        ) {
-            +"Hello from Kotlin View"
-            br()
-            a(href("#")){
-                +"Link"
+fun generateHtml(): String {
+    // setup the buffer to write the html into
+    var sb = StringBuilder()
+    // Create a html page, and set the language for accessibility on browsers
+    html(lang("en")) {
+        head {
+          title { +"Test Page View" }
+           meta(content("text/html;charset=utf8"), httpEquiv("Content-Type"))
+           meta(content("utf-8"), httpEquiv("encoding"))
+        }
+        body {
+            h1(
+                id("home"),
+                `class`("test", "data")
+            ) {
+                    +"Hello from Kotlin View"
+                br()
+                a(href("#")){
+                    +"Link"
+                }
+            }
+            p{
+                // normal kotlin code is supported inside tags
+                for(i in 1..3) {
+                    +"Count $i"
+                }
             }
         }
-        p{
-            // normal kotlin code is supported inside tags
-            for(i in 1..3) {
-                +"Count $i"
-            }
-        }
-    }
     // write the code out to a string
-}.render(builder = sb, indent = "")
+    }.render(builder = sb, indent = "")
+    return sb.toString()
+}
 ```
 
 ---
