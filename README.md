@@ -1,5 +1,5 @@
 # Kotlin Html Templating Framework
-![Maven Central](https://img.shields.io/maven-central/v/io.github.casually-blue/web)
+![Maven Central](https://img.shields.io/maven-central/v/io.github.casually-blue/web-11)
 
 This framework is intended to be used with playmvc for use with kotlin.
 It also works in a standalone fashion.
@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-    implementation("io.github.casually-blue:web:1.7")
+    implementation("io.github.casually-blue:web-11:1.7")
 }
 ```
 
