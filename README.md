@@ -25,6 +25,11 @@ dependencies {
 ## Usage
 Just use on its own or inside a View object. The view object provides a simple `.render()` function which returns a playmvc result with the http content-type set for use in your controller
 ```kotlin
+
+import io.github.casuallyblue.web.html.attributes.*
+import io.github.casuallyblue.web.html.tags.body.*
+import io.github.casuallyblue.web.html.tags.head.*
+
 // setup the buffer to write the html into
 var sb = StringBuilder()
 // Create a html page, and set the language for accessibility on browsers
