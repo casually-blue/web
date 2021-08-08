@@ -16,6 +16,11 @@ repositories {
 
 dependencies {
     implementation("com.typesafe.play:play_2.12:2.8.8")
+    testImplementation(kotlin("test"))
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
 
 java {
@@ -55,7 +60,7 @@ publishing {
                 scm {
                     connection.set("scm:git:git@github.com:casually-blue/web.git")
                     developerConnection.set("scm:git:git@github.com:casually-blue/web.git")
-                    url.set("https://gihtub.com/casually-blue/web")
+                    url.set("https://github.com/casually-blue/web")
                 }
 
                 developers {

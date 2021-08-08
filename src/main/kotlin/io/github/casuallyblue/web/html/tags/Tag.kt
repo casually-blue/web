@@ -5,7 +5,7 @@ import io.github.casuallyblue.web.html.HtmlTagMarker
 import io.github.casuallyblue.web.html.attributes.Attribute
 
 @HtmlTagMarker
-abstract class Tag(val name: String, vararg var attributes: Attribute) : Element {
+abstract class Tag(private val name: String, vararg var attributes: Attribute) : Element {
     val children = arrayListOf<Element>()
 
     fun <T : Element> initTag(tag: T, init: T.() -> Unit): T {
@@ -14,15 +14,15 @@ abstract class Tag(val name: String, vararg var attributes: Attribute) : Element
         return tag
     }
 
-    override fun render(builder: StringBuilder, indent: String) {
+    override fun render(builder: StringBuilder) {
         if(children.isNotEmpty()) {
-            builder.append("$indent<$name${renderAttributes()}>\n")
+            builder.append("<$name${renderAttributes()}>")
             for (c in children) {
-                c.render(builder, "$indent  ")
+                c.render(builder)
             }
-            builder.append("$indent</$name>\n")
+            builder.append("</$name>")
         } else {
-            builder.append("$indent<$name${renderAttributes()}/>\n")
+            builder.append("<$name${renderAttributes()}/>")
         }
     }
 
@@ -36,7 +36,7 @@ abstract class Tag(val name: String, vararg var attributes: Attribute) : Element
 
     override fun toString(): String {
         val builder = StringBuilder()
-        render(builder, "")
+        render(builder)
         return builder.toString()
     }
 }

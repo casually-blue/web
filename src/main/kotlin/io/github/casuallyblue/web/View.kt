@@ -12,6 +12,6 @@ fun html(vararg attributes: Attribute, init: HTML.() -> Unit): HTML {
 
 open class View(private val document: HTML) {
     fun render(): Result {
-        return document.render()
+        return document.renderAsResult()
     }
 }
