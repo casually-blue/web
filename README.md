@@ -1,5 +1,5 @@
 # Kotlin Html Templating Framework
-![Maven Central](https://img.shields.io/maven-central/v/io.github.casually-blue/web)
+![Maven Central](https://img.shields.io/maven-central/v/io.github.casually-blue/web-11)
 
 This framework is intended to be used with playmvc for use with kotlin.
 It also works in a standalone fashion.
@@ -18,42 +18,50 @@ repositories {
 }
 
 dependencies {
-    implementation("io.github.casually-blue:web:1.6")
+    implementation("io.github.casually-blue:web-11:1.7")
 }
 ```
 
 ## Usage
 Just use on its own or inside a View object. The view object provides a simple `.render()` function which returns a playmvc result with the http content-type set for use in your controller
 ```kotlin
-// setup the buffer to write the html into
-var sb = StringBuilder()
-// Create a html page, and set the language for accessibility on browsers
-html(lang("en")) {
-    head {
-        title { +"Test Page View" }
-        meta(content("text/html;charset=utf8"), httpEquiv("Content-Type"))
-        meta(content("utf-8"), httpEquiv("encoding"))
-    }
-    body {
-        h1(
-            id("home"),
-            `class`("test", "data")
-        ) {
-            +"Hello from Kotlin View"
-            br()
-            a(href("#")){
-                +"Link"
+
+import io.github.casuallyblue.web.html.attributes.*
+import io.github.casuallyblue.web.html.tags.body.*
+import io.github.casuallyblue.web.html.tags.head.*
+
+fun generateHtml(): String {
+    // setup the buffer to write the html into
+    var sb = StringBuilder()
+    // Create a html page, and set the language for accessibility on browsers
+    html(lang("en")) {
+        head {
+          title { +"Test Page View" }
+           meta(content("text/html;charset=utf8"), httpEquiv("Content-Type"))
+           meta(content("utf-8"), httpEquiv("encoding"))
+        }
+        body {
+            h1(
+                id("home"),
+                `class`("test", "data")
+            ) {
+                    +"Hello from Kotlin View"
+                br()
+                a(href("#")){
+                    +"Link"
+                }
+            }
+            p{
+                // normal kotlin code is supported inside tags
+                for(i in 1..3) {
+                    +"Count $i"
+                }
             }
         }
-        p{
-            // normal kotlin code is supported inside tags
-            for(i in 1..3) {
-                +"Count $i"
-            }
-        }
-    }
     // write the code out to a string
-}.render(builder = sb, indent = "")
+    }.render(builder = sb, indent = "")
+    return sb.toString()
+}
 ```
 
 ---
